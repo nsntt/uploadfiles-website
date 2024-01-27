@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filedropper.us - <%= fileName %></title>
+    <link rel="shortcut icon" href="/crossbones.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/">
+            <img width="200" height="200" src="/crossbones.png" />
+        </a>
+        <h1>filedropper.us</h1>
+        <br/>
+        <a class="github" href="https://github.com/nsntt/uploadfiles-website">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="none" viewBox="0 0 16 16" aria-hidden="true" class="scalable-icon tw-inline !tw-fill-current tw-align-baseline tw-mr-2 tw-text-black dark:tw-text-white " style="--icon-width: 2rem; --icon-height: 2rem;"><path fill="#fff" fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0" clip-rule="evenodd"></path><path fill="#1B1F23" fill-rule="evenodd" d="M8 1a7 7 0 0 0-2.21 13.64c.35.06.47-.15.47-.34v-1.19c-1.95.42-2.36-.94-2.36-.94-.32-.8-.78-1.02-.78-1.02-.64-.44.05-.43.05-.43.7.05 1.07.72 1.07.72.62 1.07 1.64.76 2.04.59.06-.46.24-.76.44-.94-1.55-.18-3.19-.78-3.19-3.46 0-.76.28-1.39.72-1.88-.07-.17-.3-.88.07-1.85 0 0 .59-.19 1.93.72a6.7 6.7 0 0 1 3.5 0c1.34-.9 1.93-.72 1.93-.72.38.97.14 1.68.07 1.85.44.5.72 1.12.72 1.88 0 2.69-1.64 3.28-3.2 3.45.25.22.47.65.47 1.3v1.92c0 .19.12.4.48.34A7 7 0 0 0 8 1" clip-rule="evenodd"></path></svg>
+            ‎ ‎ ‎ ‎dev with 💘 by nsnt
+        </a>
+        <br/>
+        <p>Download "<%= fileName %>" file here</p>
+        <br/>
+        <a href="/downloads/files/<%= fileName %>" class="download-btn">Download</a>
+        <% if (fileMetadata.contentType && fileMetadata.contentType.endsWith('.png')) { %>
+            <img class="image-preview" src="/files/<%= fileName %>" alt="Image Preview" />
+        <% } %>
+    </div>
+</body>
+</html>

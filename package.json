@@ -1,0 +1,34 @@
+{
+  "name": "anonfiles-web",
+  "version": "1.0.0",
+  "description": "A file uploader and sharer, this will allow you to upload and share your files anonymously.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/index.js",
+    "start": "babel-node src/index.js"
+  },
+  "keywords": [
+    "anonfiles",
+    "file-uploader",
+    "file-sharer"
+  ],
+  "author": "nsnt",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "7.23.9",
+    "@babel/core": "7.23.9",
+    "@babel/node": "7.23.9",
+    "@babel/preset-env": "7.23.9",
+    "nodemon": "3.0.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "3.499.0",
+    "@aws-sdk/s3-request-presigner": "3.499.0",
+    "cors": "2.8.5",
+    "dotenv": "16.4.1",
+    "ejs": "3.1.9",
+    "express": "4.18.2",
+    "express-fileupload": "1.4.3",
+    "helmet": "7.1.0"
+  }
+}
